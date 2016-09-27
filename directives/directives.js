@@ -6,16 +6,28 @@ app.controller('MyCtrl',function($scope){
 	$scope.card = {
 		title: 'Заголовок',
 		content: 'Содержимое',
+		qwerty: function(){ alert('qwerty'); },
 	}
 
-	$scope.test1 = function(){
+	$scope.testClick = function(arg){
 		alert(
-			'=test1='+NL+
+			'=testClick='+NL+
+			'arg: '+arg+NL+
 			'title: '+$scope.card.title+NL+
 			'content: '+$scope.card.content+NL+
 			''
 		);
 	}
+	
+	$scope.testChange = function(){
+		alert(
+			'=testChange='+NL+
+			'title: '+$scope.card.title+NL+
+			'content: '+$scope.card.content+NL+
+			''
+		);
+	}
+
 });
 
 app.directive('w3TestDirective',function(){
@@ -23,3 +35,23 @@ app.directive('w3TestDirective',function(){
 		templateUrl: 'include1.html'
 	}
 });
+
+app.directive('fileDirective',function(){
+	return {
+		templateUrl: 'include2_file.html'
+	}
+});
+
+app.directive('functionDirective',function(){
+	return {
+		templateUrl: function(elem, attr) {
+			// alert(
+			// 	'elem: '+ elem[0].tagName +NL+
+			// 	'attr: '+ attr +NL+
+			// 	''
+			// )
+			return 'include3_dynamic.html'
+		}
+	}
+});
+
