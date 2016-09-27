@@ -2,12 +2,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title></title>
+		<title>Директивы</title>
 		<script src="lib/angular.min.js"></script>
 		<script src="lib/angular-route.min.js"></script>
 		<script src="directives.js"></script>
 	</head>
 	<body ng-app="MyApp" ng-controller="MyCtrl">
+		<fieldset>
+			<legend>Элемент:</legend>
+			<w3-test-directive></w3-test-directive>
+		</fieldset>		
 		
+		<fieldset>
+			<legend>Атрибут:</legend>
+			<div w3-test-directive></div>
+		</fieldset>
 	</body>
 </html>
