@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Включения AngularJS</title>
+		<meta charset="utf-8" />
+		<script src="lib/js/angularjs/1.5.8/angular.min.js"></script>
+		<script src="lib/js/angularjs/1.5.8/angular-route.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body ng-app='Application' ng-controller='Controller'>
+		<div ng-include="include1()" onload=''></div>
+		<div ng-include="'b.html'"></div>
+		<div ng-include="'i.html'"></div>
+		<div ng-include="'i.html'"></div>
+	</body>
+</html>
